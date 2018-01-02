@@ -227,7 +227,7 @@ body, main {
     font-size: 2.25rem;
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
     text-decoration: none;    
-    margin: 6px 26px 6px 26px;
+    padding: 6px 26px 6px 26px;
     color: white;
     letter-spacing: 0.3rem;
     cursor: pointer;
@@ -242,7 +242,7 @@ body, main {
     font-size: 1rem;
     color: white;
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
-    margin: 14px;
+    padding: 14px;
 }
 
 @media only screen and (max-width : 912px) {
@@ -289,6 +289,12 @@ body, main {
 
     .item {
         margin: 18px 0 18px 0;
+    }
+
+    .footer a, .footer .copyright {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
     }
 
 }
