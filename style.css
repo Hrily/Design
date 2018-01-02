@@ -1,0 +1,294 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+body, main {
+    background-color: #F88BFF;
+    text-align: center;
+    min-height: 100%;
+}
+
+.back {
+    position: absolute;
+    top: -40%;
+    left: -5%;
+    width: 120%;
+    height: 100%;
+    background-color: #6BC2FF;
+    transform: rotateZ(10deg);
+}
+
+.heading {
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Six Caps', sans-serif;
+    font-size: 6rem;
+    line-height: 1;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.4);
+    text-align: left;
+    z-index: 10;
+}
+
+.heading .large {
+    font-size: 12rem;
+    letter-spacing: 0.9rem;
+}
+
+.sun {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    width: 360px;
+    height: 360px;
+}
+
+.triangle {
+    position: absolute;
+    left: 8%;
+    top: 10%;
+    width: 64px;
+}
+
+.rectangle {
+    position: absolute;
+    bottom: 5%;
+    left: 20%;
+    width: 120px;
+}
+
+.filler {
+    width: 100%;
+    height: 100vh;
+}
+
+.gallery {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 80px;
+    text-align: center;
+    line-height: 0;
+    letter-spacing: 0;
+    -webkit-transition: opacity 0.3s ease-in-out;
+       -moz-transition: opacity 0.3s ease-in-out;
+            transition: opacity 0.3s ease-in-out;
+}
+
+.item {
+    display: inline-block;
+    box-sizing: border-box;
+    max-width: 320px;
+    max-height: 240px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 18px;
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.4);
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+.item .overlay {
+    display: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(107,194,255, 0.95);
+    color: white;
+    cursor: pointer;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
+    -webkit-transition: left 0.3s ease-in-out;
+       -moz-transition: left 0.3s ease-in-out;
+            transition: left 0.3s ease-in-out;
+}
+
+.item .overlay .title {
+    position: absolute;
+    bottom: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 4px;
+    width: 100%;
+    font-family: 'Six Caps', sans-serif;
+    font-size: 2.25rem;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+}
+
+.item:hover > .overlay, .overlay:hover {
+    display: table;
+    z-index: 100;
+}
+
+.item .overlay .sub-title {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 4px;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+}
+
+.item .overlay .description {
+    display: none;
+}
+
+.item-expanded {
+    display: none;
+    position: fixed;
+    left: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    -webkit-transition: left 0.3s ease-in, top 0.3s ease-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
+       -moz-transition: left 0.3s ease-in, top 0.3s ease-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
+            transition: left 0.3s ease-in, top 0.3s ease-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.item-expanded .overlay {
+    position: relative;
+    left: 600px;
+    width: 0;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: visible;
+    background-color: #6BC2FF;    
+    text-align: left;
+    color: white;
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.4);    
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
+    -webkit-transition: width 0.3s ease-in-out 0.3s;
+       -moz-transition: width 0.3s ease-in-out 0.3s;
+            transition: width 0.3s ease-in-out 0.3s;
+}
+
+.item-expanded .overlay .title,
+.item-expanded .overlay .sub-title,
+.item-expanded .overlay .description {
+    width: 268px;
+    box-sizing: border-box;
+    padding: 16px;
+}
+
+.item-expanded .overlay .title {
+    font-family: 'Six Caps', sans-serif;
+    font-size: 2.25rem;
+    letter-spacing: 0.5rem;
+}
+
+.item-expanded .overlay .sub-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+}
+
+.item-expanded .overlay .description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+.close {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    padding: 6px;
+    box-sizing: border-box;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.footer {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 72px;
+}
+
+.footer a {
+    font-family: 'Six Caps', sans-serif;
+    font-size: 2.25rem;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
+    text-decoration: none;    
+    margin: 6px 26px 6px 26px;
+    color: white;
+    letter-spacing: 0.3rem;
+    cursor: pointer;
+}
+
+.footer a:hover {
+    border-bottom: 2px solid white;
+}
+
+.footer .copyright {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: white;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
+    margin: 14px;
+}
+
+@media only screen and (max-width : 912px) {
+
+    .item-expanded {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        box-sizing: border-box;
+        margin-top: 80px;
+        width: 100vw !important;
+        height: 75vw !important;
+    }
+
+    .item-expanded .overlay {
+        top: 100% !important;
+        left: 0 !important;
+        width: 100vh !important;
+    }
+
+
+    .item-expanded .overlay .title,
+    .item-expanded .overlay .sub-title,
+    .item-expanded .overlay .description {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width : 440px) {
+
+    .heading {
+        left: 10%;
+    }
+
+    .back {
+        left: -5%;
+        width: 150%;
+    }
+
+    .gallery {
+        padding: 80px 40px 80px 40px;
+    }
+
+    .item {
+        margin: 18px 0 18px 0;
+    }
+
+}
