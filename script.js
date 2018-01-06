@@ -65,7 +65,10 @@ function showItem (index)  {
                 if (left <= 12) 
                     cloneOverlay.style.height = 
                         (screenHeight - 80 - cloneItem.offsetHeight) + 'px';
-
+                        
+                setTimeout(() => {
+                    overlay.setAttribute('style', '');                   
+                }, 336);
             }, 16);
         }, 336);
     }, 16);

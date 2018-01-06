@@ -1,5 +1,23 @@
 projects = [
     {
+        title: "Blog",
+        sub_title: "UI",
+        description: "Interface for my Blog.",
+        image: "blog.jpg",
+        color: "#0000ff"
+    },{
+        title: "Blog",
+        sub_title: "UX - Micro Interaction",
+        description: "Micro Interaction for loading of post.",
+        image: "blog_transition.gif",
+        color: "#0000ff"
+    },{
+        title: "Resume",
+        sub_title: "UX - Micro Interaction",
+        description: "Micro Interaction for loading page.",
+        image: "resume.gif",
+        color: "#f1f1f1"
+    },{
         title: "Haqdarshak MIS",
         sub_title: "UX - Micro Interaction",
         description: "Micro Interaction for sorting table columns.",
