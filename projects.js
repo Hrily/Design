@@ -1,5 +1,11 @@
-projects = [
+var projects = [
     {
+        title: "Enlife",
+        sub_title: "Branding - Logo",
+        description: "We had to create a hypothetical company for our Principles of Management Course.<br>Our company was - Enlife.<br>Enlife is a drug relief NGO focused towards solving problem of increasing drug addiction in universities.<br>I did the branding and logo for it. ",
+        image: "enlife.png",
+        color: "#FA6775"
+    },{
         title: "Blog",
         sub_title: "UI",
         description: "Interface for my Blog.",
